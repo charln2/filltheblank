@@ -1,0 +1,134 @@
+#title {
+	text-align: left;
+}
+#instructions {
+	font-size: medium;
+	text-align: left;
+	font-weight: 600;
+	margin-top: -8px;
+	margin-bottom: 16px;
+}
+#questionbox {
+	background-color: #6FA698;
+	padding: 8px;
+	text-align: center;
+	position: relative;
+	min-height: 250px;
+}
+
+#question {
+	background-color: rgba(50, 50, 50, 0.7);
+	margin: 0 4px;
+	padding: 4px;
+	border-radius: 4px;
+}
+
+#selectionarea {
+	background: #0E5342;
+	position: relative;
+	/*padding: 8px;*/
+}
+
+#guesspool {
+	/*float: left;*/
+	padding: 8px;
+	float: left;
+	/*width: 80%;*/
+	display: inline;
+}
+
+#check {
+	font-size: xx-large;
+	font-weight: bold;
+	padding: 8px;
+	display: inline-block;
+	overflow: hidden;
+	top: 50%;
+	position: absolute;
+	transform: translateY(-50%);
+	right:0;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: xx-large;
+	font-weight: bold;
+}
+
+.clickable {
+	border-radius: 8px;
+	padding: 0 4px;
+	position: relative;
+	font-weight: inherit;
+	font-size: inherit;
+	display: inline;
+	/*min-width: 30px;*/
+}
+
+.slot {
+	background-color: #AAAAAA;
+	position: relative;
+}
+
+.buttonStyle {
+	border: thin solid #F0E020;
+	background-color: #FFDFAA;
+	color: #663300;
+}
+
+.buttonStyle:hover {
+	border: thin solid #FFCC00;
+	background-color: #FCF9D6;
+	color: #996633;
+	cursor: pointer;
+}
+
+.buttonStyle:active {
+	border: thin solid #99CC00;
+	background-color: #F5FFD2;
+	color: #669900;
+	cursor: pointer;
+}
+
+.checkstyle {
+	/*background-color: #123210;*/
+	background-color: #338A2E;
+	color: #8DCF8A;
+	/*box-shadow: inset 1px 1px #FFFFFF;*/
+	border: thin solid #123210;
+}
+.checkstyle:hover {
+	/*color: #8DCF8A;*/
+	background-color: #5CBE57;
+}
+.checkstyle:active {
+	background-color: #8BD987;
+}
+.checkstyleinactive {
+	background-color: #156711;
+	color: #338A2E;
+	
+	cursor: default;
+	pointer-events: none;
+}
+
+.inactive {
+	/*background-color: #AAAAAA;*/
+	background-color: rgba(200, 200, 200, 0.6);
+	color: rgba(175, 175, 175, 0.3);
+	border: none;
+	cursor: default;
+	pointer-events: none;
+}
+
+/* formatting for blank slots */
+.blank {
+	color: Gray;
+}
+/* pseudo-boolean value to identify if a button is chosen */
+.inslot {
+}
+
+.clear {
+	clear: both;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<title>Fill The Blank</title>
+	<link href="css/style.css" rel="stylesheet" />
+	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div id="questionbox">
+		<div id="title">
+			Topic - Module
+		</div>
+		<hr />
+		<div id="instructions">Fill in the blanks</div>
+		<div id="question">
+			<div class="clickable blank slot">_1_</div>
+			<span>the</span>
+			<div class="clickable blank slot">_2_</div><!--
+			--><span>. Here are more words that overflow into the next </span>
+			<div class="clickable blank slot">_3_</div><!--
+			--><span>.</span>
+		</div>
+	</div>
+
+	<div id="selectionarea">
+		<div id="guesspool">
+			<button class="clickable buttonStyle">fill</button>
+			<button class="clickable buttonStyle">line</button>
+			<button class="clickable buttonStyle">blank</button>
+		</div>
+		<button id="check" class="checkstyle ">check</button>
+	
+		<br class="clear"/>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
