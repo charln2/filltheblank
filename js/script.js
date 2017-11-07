@@ -15,6 +15,7 @@ $(document).ready(function() {
     genericSlot.text("___");
 
     enableClicks();
+    $(".buttonStyle:first").trigger("click");
 });
 
 /** -- enableClicks() --
@@ -50,6 +51,8 @@ function enableClicks() {
                 var dup = $(this).clone(true);
                 dup.addClass("inslot");
                 nextSlot.replaceWith(dup);
+                dup.css("visibility", "hidden");
+                move($(this), dup);
 
                 // disable clicking on original button
                 $(this).addClass("inactive");
@@ -86,4 +89,21 @@ var trySubmit = function() {
     else {
         $("#check").addClass("checkstyleinactive");
     }
-}
+};
+
+var move = function(from, slot) {
+    var copy = $(from).clone();
+    copy.css({"position": "absolute", 
+              "display": "block"
+    });
+    from.prepend(copy);
+    
+    var vOffset = from.offset().top - 
+                    slot.offset().top;
+    var hOffset = from.offset().left -
+                    slot.offset().left;
+    copy.animate({top: "-=" + vOffset, left: "-="+hOffset}, 
+    200, 
+    "swing",
+    function() {slot.css({"visibility": "visible"}); copy.remove();})
+};
